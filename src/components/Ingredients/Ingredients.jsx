@@ -1,7 +1,7 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
-function Ingredients() {
+export function Ingredients() {
 
   const [ingredient, setIngredients] = useState([]);
 
@@ -21,10 +21,7 @@ function Ingredients() {
 
 
   return (
-    <div>
-      
-    </div>
+      <h1>Funciona </h1>
   )
 }
 
-export default Ingredients
