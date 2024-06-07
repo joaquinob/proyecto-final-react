@@ -7,6 +7,7 @@ import Menu from '../Menu/Menu';
 function Home({ user, setUser, ingredient }) {
   const [ing, setIng] = useState('');
   const [men, setMen] = useState('');
+  const [selectedIngredients, setSelectedIngredients] = useState([]);
 
   const handleBack = () => {
     setUser([]);
@@ -21,6 +22,17 @@ function Home({ user, setUser, ingredient }) {
     setIng('0');
     setMen('1');
   }
+
+  const handleSelectIngredient = (ingredient) => {
+    setSelectedIngredients((prev) => {
+      if (prev.includes(ingredient)) {
+        return prev.filter((item) => item !== ingredient);
+      } else if (prev.length < 3) {
+        return [...prev, ingredient];
+      }
+      return prev;
+    });
+  };
 
   return (
     <div className='div'>
@@ -37,10 +49,16 @@ function Home({ user, setUser, ingredient }) {
           </li>
         </ul>
       </nav>
-      <h1 className='wellcome'> ¡Bienvenid@ {user}!</h1>
+      <h1 className='welcome'> ¡Bienvenid@ {user}!</h1>
       
-      {ing === '1' && <Ingredients ingredients={ingredient} />}
-      {men === '1' && <Menu />}
+      {ing === '1' && (
+        <Ingredients
+          ingredients={ingredient}
+          selectedIngredients={selectedIngredients}
+          onSelectIngredient={handleSelectIngredient}
+        />
+      )}
+      {men === '1' && <Menu selectedIngredients={selectedIngredients} />}
     </div>
   );
 }

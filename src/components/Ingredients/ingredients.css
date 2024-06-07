@@ -11,6 +11,16 @@
     padding: 5px;
     text-align: center;
     background-color: #604878;
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 10px;
+    transition: background-color 0.3s;
+}
+
+.eachFood.selected{
+  background-color: #d3ffd3; /* Color verde claro */
+  color:black
 }
 
 .eachFood:hover{
@@ -25,3 +35,9 @@
     border-radius: 10px;
     object-fit: cover;
 }
+
+  .name {
+    text-align: center;
+    margin-top: 5px;
+  }
+  

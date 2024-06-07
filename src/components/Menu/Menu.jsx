@@ -1,11 +1,24 @@
-import React from 'react'
+import React from 'react';
+import './menu.css';
 
-export function Menu() {
+function Menu({ selectedIngredients }) {
   return (
-    <div>
-      <h1>Funciona tmb</h1>
+    <div className='menu'>
+      <h2>Ingredientes Seleccionados</h2>
+      {selectedIngredients.length === 0 ? (
+        <p>No hay ingredientes seleccionados</p>
+      ) : (
+        <div className='selectedIngredients'>
+          {selectedIngredients.map((ingredient) => (
+            <div key={ingredient.id} className='eachFood selected'>
+              <img src={ingredient.img} alt={`Ingredient ${ingredient.id}`} className='img' />
+              <p className='name'>{ingredient.plate}</p>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
-  )
+  );
 }
 
-export default Menu
+export default Menu;
