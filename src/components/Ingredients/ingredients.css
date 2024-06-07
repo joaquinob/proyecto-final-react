@@ -6,10 +6,11 @@
 }
 
 .eachFood{
-    border: solid black 2px;
+    border: solid #001848 2px;
     border-radius: 10px;
     padding: 5px;
     text-align: center;
+    background-color: #604878;
 }
 
 .eachFood:hover{
