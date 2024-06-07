@@ -1,12 +1,13 @@
 import React from 'react';
+import './ingredients.css'
 
 function Ingredients({ ingredients }) {
   return (
-    <div>
+    <div className='all'>
       {ingredients.map((ingredient) => (
-        <div key={ingredient.id}>
-          <img src={ingredient.img} alt={`Ingredient ${ingredient.id}`} />
-          <p>Ingrediente {ingredient.id}</p>
+        <div key={ingredient.id} className='eachFood'>
+          <img src={ingredient.img} alt={`Ingredient ${ingredient.id}`} className='img'/>
+          <p className='name'> {ingredient.plate}</p>
         </div>
       ))}
     </div>

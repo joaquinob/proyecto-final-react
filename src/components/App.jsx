@@ -9,12 +9,13 @@ function App() {
   const [ingredient, setIngredients] = useState([]);
 
   useEffect(() => {
-    axios('https://66577df95c361705264503e6.mockapi.io/menu/food')
+    axios('https://6662cfeb62966e20ef0a1c9c.mockapi.io/platos')
       .then((res) => {
         const mapArray = res.data.map((item) => {
           const newObject = {
             id: item.id,
-            img: item.food
+            img: item.img,
+            plate: item.name
           };
           return newObject;
         });
@@ -24,7 +25,7 @@ function App() {
         console.error('Error fetching data:', error);
       });
   }, []); 
-  
+
   return (
     <div>
       <BrowserRouter>
