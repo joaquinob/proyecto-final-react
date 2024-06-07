@@ -39,10 +39,10 @@ function Home({ user, setUser, ingredient }) {
       <nav className='nav'>
         <ul className='ul'>
           <li className='list'>
-            <NavLink className='btn' onClick={op_ingredients}>Seleccionar ingredientes</NavLink>
+            <NavLink className='btn' onClick={op_ingredients}>Seleccionar platos</NavLink>
           </li>
           <li className='list'>
-            <NavLink className='btn' onClick={op_menu}>Menú</NavLink>
+            <NavLink className='btn' onClick={op_menu}>Ver menú</NavLink>
           </li>
           <li className='list'>
             <button className='btn' onClick={handleBack}>Cerrar sesión</button>
@@ -50,7 +50,7 @@ function Home({ user, setUser, ingredient }) {
         </ul>
       </nav>
       <h1 className='welcome'> ¡Bienvenid@ {user}!</h1>
-      
+      <h2>¡Seleccione 3 platos para su menú!</h2>
       {ing === '1' && (
         <Ingredients
           ingredients={ingredient}

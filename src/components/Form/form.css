@@ -1,0 +1,19 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.btn{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    background-color: #483078;
+    border: solid #001848 2px;
+    height: 20px;
+    font-size: small;
+    color: white;
+}

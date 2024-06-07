@@ -40,7 +40,7 @@ function Form({ setUser }) {
             className='input'
             value={password} 
             onChange={ev => setPassword(ev.target.value)} />
-        <button className='input'>Acceder</button>
+        <button className='input btn'>Acceder</button>
       </form>
       <div className='error'>
         {error && <p>Todos los campos son obligatorios</p>}
