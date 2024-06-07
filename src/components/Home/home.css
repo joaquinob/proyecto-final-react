@@ -4,6 +4,14 @@
     margin-top: 20px;
 }
 
+div.div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
 .ul{    
     display: flex;
     justify-content: center;
