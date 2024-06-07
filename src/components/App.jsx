@@ -3,6 +3,7 @@ import Form from "./Form/Form";
 import Home from "./Home/Home";
 import axios from "axios";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import './app.css';
 
 function App() {
   const [user, setUser] = useState([]);
@@ -27,7 +28,7 @@ function App() {
   }, []); 
 
   return (
-    <div>
+    <div className="all">
       <BrowserRouter>
         <Routes>
           <Route

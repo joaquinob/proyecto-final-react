@@ -23,7 +23,7 @@ function Home({ user, setUser, ingredient }) {
   }
 
   return (
-    <>
+    <div className='div'>
       <nav className='nav'>
         <ul className='ul'>
           <li className='list'>
@@ -37,11 +37,11 @@ function Home({ user, setUser, ingredient }) {
           </li>
         </ul>
       </nav>
-      <h1> ¡Bienvenido {user}!</h1>
+      <h1 className='wellcome'> ¡Bienvenid@ {user}!</h1>
       
       {ing === '1' && <Ingredients ingredients={ingredient} />}
       {men === '1' && <Menu />}
-    </>
+    </div>
   );
 }
 
